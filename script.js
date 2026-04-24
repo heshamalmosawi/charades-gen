@@ -1,25 +1,8 @@
-const items = [
-  "The Lion King",
-  "Inception",
-  "Titanic",
-  "The Matrix",
-  "Forrest Gump",
-  "Breaking Bad",
-  "Stranger Things",
-  "The Office",
-  "Game of Thrones",
-  "Friends",
-  "Jurassic Park",
-  "Star Wars",
-  "The Godfather",
-  "Back to the Future",
-  "E.T. the Extra-Terrestrial",
-  "The Shawshank Redemption",
-  "Pulp Fiction",
-  "The Dark Knight",
-  "Schindler's List",
-  "Fight Club",
-];
+let items = [];
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(data => { items = data; });
 
 const titleEl = document.getElementById("title");
 const cardEl = document.getElementById("card");
